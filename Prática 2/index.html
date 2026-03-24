@@ -4,8 +4,9 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Fotógrafo profissional</title>
+    <title>Seras Victoria</title>
     <link rel="stylesheet" href="style.css">
+    <link rel="icon" href="Imagens/favicon.png">
 </head>
 
 <body>
@@ -13,66 +14,95 @@
     <header>
         <nav class="guias">
             <a href="#">Início</a>
-            <a href="#">Portifólio</a> 
-            <a href="#">Álguns de clientes</a>
-            <a href="#">Sobre</a>
+            <a href="#sobre">Sobre</a>
+            <a href="#portifolio">Portifólio</a>
+            <a href="#studio">Studio</a>
+            <a href="#depoimentos">Depoimentos</a>
+            <a href="#contatos">Contato</a>
         </nav>
 
     </header>
 
+    <!-- Sobre e inicio-->
     <main>
         <div class="background_image">
             <h1>Fotografia profissional</h1>
         </div>
 
-        <h2>Sobre</h2>
+        <h2 id="sobre">Sobre</h2>
+
         <div class="pai_imagem_lado">
             <div>
-                <img src="Imagens/foto17.jpg" alt="Foto do autor" class="filho_image">
+                <img src="Imagens/foto_autor.jpg" alt="Foto do autor" class="filho_image">
             </div>
-            <p>Lorem ipsum dolor sit amet. At itaque laudantium qui quas repellendus rem voluptas molestiae sit ratione aliquam id modi numquam! Qui unde inventore sit autem iure qui odio iste 33 odit nihil et neque sunt vel enim dignissimos aut pariatur explicabo. Ex nihil amet ut quisquam culpa eum quod vero. Qui enim neque aut tempora omnis eum rerum deleniti aut reprehenderit corrupti id facere alias aut aliquid nostrum? Id molestiae aspernatur qui aspernatur amet et aperiam delectus eos earum voluptates? Qui quaerat internos et odit laudantium aut libero explicabo est placeat aliquid cum maxime excepturi qui eaque magni. Et ratione omnis id voluptatem accusantium sed rerum corporis. Aut consequuntur dolor nam rerum exercitationem eos corrupti dolor non doloremque illo sed internos dolores.</p>
+            <p>Há quase duas décadas, Seras Victoria transformou o fotojornalismo em uma busca obsessiva pela autenticidade. Esqueça as poses plásticas: aqui, o foco são trajetórias reais. Do Maranhão para o mundo, são mais de 300 casamentos e destinos internacionais registrados sob a ótica do inesperado. Ela traduz memórias em design editorial de alto luxo, o duo consolidou uma assinatura premiada por associações globais. Hoje, o fruto dessa criatividade é o estúdio próprio em Marajá do Sena - um laboratório de retratos e educação voltado para quem busca o extraordinário.</p>
+        </div>
+
+        <!-- Portifólio -->
+        <h2 id="portifolio">Portifólio</h2>
+        <div>
+            <p>As imagens abaixo revelam a verdadeira face do belo: o inesperado em perfeita harmonia com a criação. Mais do que fotografias, são a mais pura ilustração da alma.</p>
+
+            <div class="image_portifolio">
+                <img src="Imagens/Portifolio/foto1.jpg" alt="Fotografia 1" class="fotos_portifolio">
+                <img src="Imagens/Portifolio/foto2.jpg" alt="Fotografia 2" class="fotos_portifolio">
+                <img src="Imagens/Portifolio/foto3.jpg" alt="Fotografia 3" class="fotos_portifolio">
+                <img src="Imagens/Portifolio/foto4.jpg" alt="Fotografia 4" class="fotos_portifolio">
+                <img src="Imagens/Portifolio/foto5.jpg" alt="Fotografia 5" class="fotos_portifolio">
+            </div>
         </div>
     </main>
 
-    <div>
-        <h2>Portifólio</h2>
-        <p>Lorem ipsum dolor sit amet. Non quos eveniet eos ipsa ullam rem quas temporibus. Et quia enim qui fugit deleniti a atque Quis et perferendis nemo aut commodi officiis? Qui explicabo tenetur eos explicabo tempora qui placeat rerum.</p>
-
-        <div class="image_portifolio">
-            <img src="Imagens/foto14.jpg" alt="Fotografia 1" class="fotos_portifolio">
-            <img src="Imagens/foto10.jpg" alt="Fotografia 2" class="fotos_portifolio">
-            <img src="Imagens/foto15.jpg" alt="Fotografia 3" class="fotos_portifolio">
-            <img src="Imagens/foto16.jpg" alt="Fotografia 4" class="fotos_portifolio">
-            <img src="Imagens/foto12.jpg" alt="Fotografia 5" class="fotos_portifolio">
-        </div>
-
-    </div>
-
-    <div>
+    <!-- Estúdio-->
+    <div id="studio">
         <h2>Studio</h2>
-        <p>Nosso estudio fica em um conceituado bairro nobre da cidade de Marajá do Sena/MA:</p>
+        <p>Localizado em Marajá do Sena/MA, nosso estúdio foi cuidadosamente projetado para ser um refúgio acolhedor e seguro, oferecendo o ambiente perfeito para projetos criativos.</p>
         
         <figure>
-            <div class="foto_estudio">
-                <img src="Imagens/studio.jpg" alt="Foto do Estudio">
+            <div>
+                <img src="Imagens/studio.jpg" alt="Foto do Estudio"  class="foto_estudio">
             </div>
-            <figcaption>Foto do estudio na rua Vila Sesamo, numero 666, bairro Novo Aarão Reis, Marajá do Sena, Maranhão, Nordeste, Brasil, América do Sul, América, Planeta Terra, Sistema Solar, Via Lactea</figcaption>
         </figure>
     </div>
 
-<!-- Colocar muitas imagens -->
+    <!-- Citação -->
+    <div class="citacao">
+        <p class="citacao_titulo">"Pense em toda beleza que ainda resta em torno de você e seja feliz."</p>
+        <p class="citacao_autor">- Anne Frank </p>
+    </div>
 
+    <!--Depoimentos dos clientes-->
+    <h2 id="depoimentos">Depoimentos</h2>
+    <div class="conteiner_depoimentos">
+        <!-- Depoimento 1-->
+        <div class="card_depoimento">
+            <img src="Imagens/depoimento1.jpg" alt="Cliente 1" class="foto_depoimento">
+            <p>"O trabalho de fotografia foi impecável! As fotos do meu casamento ficaram parecendo cenas de filme. Recomendo muito!"</p>
+            <h4>- Charlotte Morningstar</h4>
+        </div>
+
+        <!-- Depoimento 2-->
+        <div class="card_depoimento">
+            <img src="Imagens/depoimento2.jpg" alt="Cliente 2" class="foto_depoimento">
+            <p>"Ter nossa história documentada por vocês foi um privilégio. A sensibilidade e o profissionalismo dessa equipe são raros de encontrar"</p>
+            <h4>- Lúcifer dos Santos</h4>
+        </div>
+    </div>
+
+    <!-- Contato-->
+    <h2 id="contatos">Contato</h2>
     <div>
-        <h2>Depoimentos</h2>
-        
+        <p>Sua história merece nossa total atenção. Retornamos todos os contatos em até 24 horas com uma proposta personalizada. (Pedimos apenas que confira sua caixa de spam caso nossa mensagem não apareça). Registrar o seu legado visual é o nosso maior propósito.</p>
+
+        <h3>Entre em contato:</h3>
+        <p>Email: serasvictoria@bol.com</p>
+        <p>Instagram: @serasv</p>
+        <p>Endereço: Rua Vila Sésamo, 666, bairro Novo Aarão Reis, Marajá do Sena, Maranhão</p>
     </div>
 
     <footer>
         <p>&copy; Todos os direitos reservados.</p>
     </footer>
 
-
 </body>
-<!-- https://www.lutterbachfotografia.com.br/ -->
-<!-- https://www.nayaraandradefotografia.com/-->
 </html>

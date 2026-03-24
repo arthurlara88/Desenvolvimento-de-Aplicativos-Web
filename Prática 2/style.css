@@ -1,25 +1,106 @@
+/* Todas as imagens usadas estão sob dominio publico no site Pexels */
+
 /* Bibliotecas */
 
 @import url('https://fonts.googleapis.com/css2?family=Roboto:wght@400;700&display=swap');
+@import url('https://googleapis.com');
+
+/* Padrão */
 
 * {
     margin: 0px;
     padding: 0px;
     box-sizing: border-box;
 }
-
-body {
-    background-color: black;
+html {
+    /* Isso faz a página deslizar suavemente até a seção */
+    scroll-behavior: smooth; 
 }
 
+#portfolio, #sobre, #depoimentos, #studio, #contatos {
+    
+    /* O header para 100px antes do teto */
+    scroll-margin-top: 60px; 
+}
+
+body {
+    background-color: #212529;
+}
+
+h1 {
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+
+    font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+    color: #495057;
+    font-size:xx-large;
+    font-weight:bolder;
+    height: 100vh;
+}
+
+h2 {
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+
+    font-family: system-ui, -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, Oxygen, Ubuntu, Cantarell, 'Open Sans', 'Helvetica Neue', sans-serif;
+    color: white;
+
+    padding: 30px;
+}
+
+h3 {
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+
+    font-family: system-ui, -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, Oxygen, Ubuntu, Cantarell, 'Open Sans', 'Helvetica Neue', sans-serif;
+    color: white;
+
+    padding: 10px;
+}
+
+
+p {
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+
+    font-family: Arial;
+    color: white;
+}
+
+/*Footer*/
+
 footer {
-    background-color: white;
+    background-color: #495057;
+    text-align: center;
+    padding: 30px;
+    width: 100%;
+    
+    clear: both; /*garante q o rodape não vai subir*/
 }
 
 footer p {
     color: black;
-    font-family: Arial;
+    font-family: 'Montserrat', sans-serif;
 
+}
+
+/* Header */
+
+header {
+    background-color: #495057;
+    position: fixed;
+
+    top: 0; /* cola em cima */
+    width: 100%; 
+    z-index: 1000; /*faz com q as guias figuem sempre em frente as imagens */
 }
 
 .guias {
@@ -36,8 +117,19 @@ footer p {
     font-weight: bold;
 }
 
+.guias a {
+    font-family: Arial, Helvetica, sans-serif;
+    color: white;
+    transition: color 0.3s ease, transform 0.3s ease;
+}
+
+.guias a:hover {
+    color: #cda434; /* Muda para uma cor dourada */
+    transform: scale(1.1); /* aumenta no texto */
+}
+
 .background_image {
-    background-image: url('Imagens/background_shalltear.jpg');
+    background-image: url('Imagens/background_guide.jpg');
     background-size: cover;
     background-repeat: no-repeat;
     background-position: center;
@@ -51,56 +143,7 @@ footer p {
     align-items: center;
 }
 
-h1 {
-    display: flex;
-    flex-direction: column;
-    justify-content: center;
-    align-items: center;
-
-    font-family: cursive;
-    color: white;
-
-    height: 100vh;
-}
-
-h2 {
-    display: flex;
-    flex-direction: column;
-    justify-content: center;
-    align-items: center;
-
-    font-family: Arial, Helvetica, sans-serif;
-    color: white;
-}
-
-p {
-    display: flex;
-    flex-direction: column;
-    justify-content: center;
-    align-items: center;
-
-    font-family: Arial;
-    color: white;
-}
-
-footer {
-    background-color: white;
-    color: black;
-    text-align: center;
-    padding: 30px;
-    width: 100%;
-    
-    clear: both; /*garante q o rodape não vai subir*/
-}
-
-header {
-    background-color: white;
-    position: fixed;
-
-    top: 0; /* cola em cima */
-    width: 100%; 
-    z-index: 1000; /*faz com q as guias figuem sempre em frente as imagens */
-}
+/* Portifolio */
 
 .image_portifolio {
     display: flex;
@@ -115,18 +158,20 @@ header {
 }
 
 .fotos_portifolio {
-    max-width: 100%;
-    max-height: 100%;
+    max-width: 50%;
+    max-height: 50%;
 
     object-fit: contain; /* esticamento de acordo com a tela */
+
+    padding: 10px;
 }
+
+/* Sobre */
 
 .pai_imagem_lado {
     display: flex;
     align-items: center;
-    gap: 30px;
-
-    padding: 20px;
+    gap: 10px;
 
     max-width: auto;
     max-height: auto;
@@ -144,16 +189,157 @@ header {
 }
 
 .filho_image {
-    width: auto;
-    height: auto;
+    width: 600px;
+    height: 400px;
     flex-shrink: 0;
     
     object-fit: cover;
+
 }
+
+/* Studio */
 
 .foto_estudio {
     display: flex;
     align-items: center;
     justify-content: center;
-    
+
+    width: 500px;
+    height: 500px;
+
+    padding: 10px;
+    margin: auto;
 }
+
+.estudio_localizacao {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+
+    color: white;
+    font-family: Arial;
+}
+
+/* Citação */
+
+.citacao {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    background-color: #6c757d;
+
+    padding: 30px;
+}
+
+.citacao_titulo {
+
+    font-family: fantasy;
+    padding: 50px;
+    margin: 0px;
+    color:black;
+    font-size: x-large;
+}
+
+.citacao_autor {
+    font-family: Arial, Helvetica, sans-serif;
+    font-style: italic;
+    margin: 0px;
+    margin-top: 10px;
+    color: black;
+}
+
+/* Depoimentos */
+
+.conteiner_depoimentos {
+    display: flex;
+    justify-content: center;
+    gap: 40px;
+    padding: 40px 20px; /* Cria espaço em cima e em baixo no card */
+}
+
+.card_depoimento {
+    background-color: gray;
+    padding: 30px;
+    border-radius: 15px;
+    text-align: center;
+
+    box-shadow: 0px 10px 20px rgba(0, 0, 0, 0.5); /* sombra leve */
+}
+
+.foto_depoimento {
+    width: 100px;
+    height: 100px;
+    object-fit: cover;
+
+    border-radius: 75%;
+    border: 9px solid white; /*borda ao redor da imagem */
+}
+
+.card_depoimento h4 {
+    font: italic;
+}
+
+/* Celular */
+
+@media (max-width: 768px) {
+    
+    /* 1. Header e Navegação */
+    .guias {
+        flex-wrap: wrap; /* permite que os links quebrem linha */
+        padding: 10px;
+        gap: 10px;
+    }
+    
+    .guias a {
+        font-size: 0.9rem; /* Diminui um pouco a fonte dos links */
+    }
+
+    /* Seção Sobre (Empilha imagem e texto) */
+    .pai_imagem_lado {
+        flex-direction: column; /* Coloca a foto em cima e o texto embaixo */
+        margin: 20px; /* Reduz as margens laterais */
+    }
+
+    .filho_image {
+        width: 100%; /* Ocupa 100% da tela do celular */
+        height: auto; /* Mantém a proporção da imagem sem distorcer */
+    }
+
+    /* Portfólio (Fotos maiores no mobile) */
+    .fotos_portifolio {
+        max-width: 90%; /* Deixa as fotos ocuparem quase toda a largura da tela */
+    }
+
+    /* Studio (Ajuste de tamanho da foto) */
+    .foto_estudio {
+        width: 100%;
+        height: auto;
+        padding: 0 20px;
+    }
+
+    /* Depoimentos (Empilha os cards) */
+    .conteiner_depoimentos {
+        flex-direction: column; /* Um card debaixo do outro */
+        padding: 20px;
+        align-items: center; /* Centraliza os cards na tela */
+    }
+
+    /* Textos e Títulos gerais (Ajustes de respiro) */
+    h1 {
+        font-size: x-large;
+        text-align: center;
+    }
+
+    .citacao_titulo {
+        padding: 20px;
+        font-size: 1.2rem;
+        text-align: center;
+    }
+    
+    p {
+        padding: 0 15px; /* Evita que o texto encoste nas bordas do celular */
+        text-align: center; /* Centraliza os textos para leitura mobile */
+    }
+}
+
+
